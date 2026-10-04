@@ -31,7 +31,7 @@ GPS / Telematics Device
            │
            ▼
 ┌──────────────────────┐
-│      PostgreSQL      │
+│      PostgresSQL     │
 │                      │
 │ Device / Telemetry   │
 │       Data           │
@@ -69,7 +69,7 @@ Codec 8 Decoder
     ↓
 Telemetry Event
     ↓
-PostgreSQL
+PostgresSQL
 ```
 
 ## Technology Stack
@@ -90,10 +90,11 @@ PostgreSQL
 
 ### Requirements
 
-* JDK 21
+* JDK 21 & Kotlin
 * Gradle
 * PostgreSQL
 * Git
+* IntelliJ IDEA
 
 Do not commit real database credentials to the repository.
 
@@ -171,7 +172,7 @@ The planned architecture is:
               ┌─────────┴─────────┐
               ▼                   ▼
        ┌─────────────┐     ┌─────────────┐
-       │ PostgreSQL  │     │ Future      │
+       │ PostgresSQL │     │ Future      │
        │             │     │ Streaming   │
        └──────┬──────┘     └─────────────┘
               │
@@ -182,14 +183,14 @@ The planned architecture is:
               │
               ▼
        ┌─────────────┐
-       │ Web         │
+       │ Web/Mobile  │
        │ Dashboard   │
        └─────────────┘
 ```
 
 ## Why This Project?
 
-The project is intended as a hands-on exploration of backend engineering for connected systems, including:
+The project is intended as an MVP of backend engineering for connected systems, including:
 
 * Network programming
 * Binary protocol implementation
@@ -221,7 +222,7 @@ AVL / Codec 8
     ↓
 Session Management
     ↓
-PostgreSQL
+PostgresSQL
     ↓
 REST API
     ↓
