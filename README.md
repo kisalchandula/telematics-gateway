@@ -72,43 +72,6 @@ Telemetry Event
 PostgreSQL
 ```
 
-## Architecture
-
-The application is structured around several core components:
-
-```text
-app/
-└── src/
-    ├── main/
-    │   └── kotlin/
-    │       ├── server/
-    │       │   ├── GatewayServer
-    │       │   └── ClientConnection
-    │       │
-    │       ├── protocol/
-    │       │   ├── TeltonikaDecoder
-    │       │   ├── AvlPacketDecoder
-    │       │   ├── Codec8Decoder
-    │       │   └── Crc16
-    │       │
-    │       ├── device/
-    │       │   └── DeviceSessionManager
-    │       │
-    │       ├── message/
-    │       │   └── TelemetryEvent
-    │       │
-    │       └── service/
-    │           └── ...
-    │
-    └── test/
-        └── kotlin/
-            ├── protocol/
-            ├── server/
-            └── ...
-```
-
-The architecture is intentionally being developed incrementally, starting with the ingestion layer and gradually adding persistence, APIs, and client-facing services.
-
 ## Technology Stack
 
 | Technology         | Purpose                  |
