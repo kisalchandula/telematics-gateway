@@ -7,11 +7,20 @@ fun main() {
     println("       TELEMATICS GATEWAY")
     println("=================================")
 
+    val jdbcUrl = System.getenv("DB_URL")
+        ?: "jdbc:postgresql://localhost:5432/telematics"
+
+    val username = System.getenv("DB_USERNAME")
+        ?: "postgres"
+
+    val password = System.getenv("DB_PASSWORD")
+        ?: error("DB_PASSWORD environment variable is not set")
+
     val repository =
         PostgresTelemetryRepository(
-            jdbcUrl = "jdbc:postgresql://localhost:5432/telematics",
-            username = "postgres",
-            password = "postgres"
+            jdbcUrl = jdbcUrl,
+            username = username,
+            password = password
         )
 
     val server =
