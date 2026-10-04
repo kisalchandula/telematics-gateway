@@ -239,7 +239,3 @@ Each stage is intended to leave the system in a working state and is covered by 
 This project is licensed under the MIT License.
 
 See the [LICENSE](LICENSE) file for details.
-
-## Disclaimer
-
-This project is an educational and engineering portfolio project. Teltonika protocol support is being implemented for development and testing purposes and should not be considered production-ready without additional security, reliability, scalability, and protocol-compliance work.
